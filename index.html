@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prospect Pulse | Baseball Prospect Database</title>
+  <meta
+    name="description"
+    content="Baseball prospect database for rankings, scouting reports, and player development tracking."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-mark">P</span>
+        <span>Prospect Pulse</span>
+      </div>
+      <nav>
+        <a href="#rankings">Rankings</a>
+        <a href="#database">Database</a>
+        <a href="#reports">Reports</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <button class="nav-btn">Get Access</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Baseball scouting intelligence</p>
+          <h1>Track the next generation of MLB talent.</h1>
+          <p class="subtitle">
+            Search prospects, monitor rankings, compare tools, and follow the latest scouting reports in one place.
+          </p>
+          <div class="hero-actions">
+            <a href="#database" class="primary-btn">Browse Prospects</a>
+            <a href="#reports" class="secondary-btn">View Reports</a>
+          </div>
+
+          <div class="stats">
+            <div>
+              <strong>2,400+</strong>
+              <span>players tracked</span>
+            </div>
+            <div>
+              <strong>28</strong>
+              <span>scouting reports</span>
+            </div>
+            <div>
+              <strong>120</strong>
+              <span>new updates weekly</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-header">
+            <span class="dot"></span>
+            <span>Top 10 Prospects</span>
+          </div>
+          <ul class="prospect-list">
+            <li>
+              <div>
+                <strong>Elijah Carter</strong>
+                <span>OF | Braves</span>
+              </div>
+              <span class="grade">80</span>
+            </li>
+            <li>
+              <div>
+                <strong>Mateo Ruiz</strong>
+                <span>SS | Yankees</span>
+              </div>
+              <span class="grade">79</span>
+            </li>
+            <li>
+              <div>
+                <strong>Jalen Brooks</strong>
+                <span>SP | Dodgers</span>
+              </div>
+              <span class="grade">78</span>
+            </li>
+            <li>
+              <div>
+                <strong>Marco Silva</strong>
+                <span>C | Red Sox</span>
+              </div>
+              <span class="grade">77</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="rankings" class="rankings">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Top prospects</p>
+          <h2>Player watchlist</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="mini-card">
+            <div class="mini-top">
+              <span class="tag">OF</span>
+              <span class="rating">80</span>
+            </div>
+            <h3>Elijah Carter</h3>
+            <p>Atlanta Braves</p>
+            <ul>
+              <li>Hit: 60</li>
+              <li>Power: 70</li>
+              <li>Speed: 65</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="mini-top">
+              <span class="tag">SP</span>
+              <span class="rating">79</span>
+            </div>
+            <h3>Jalen Brooks</h3>
+            <p>Los Angeles Dodgers</p>
+            <ul>
+              <li>Fastball: 70</li>
+              <li>Slider: 68</li>
+              <li>Command: 64</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <div class="mini-top">
+              <span class="tag">SS</span>
+              <span class="rating">78</span>
+            </div>
+            <h3>Mateo Ruiz</h3>
+            <p>New York Yankees</p>
+            <ul>
+              <li>Hit: 62</li>
+              <li>Defense: 68</li>
+              <li>Arm: 66</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="database" class="database">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Prospect database</p>
+          <h2>Search the next wave of talent</h2>
+        </div>
+
+        <div class="search-row">
+          <input id="searchInput" type="text" placeholder="Search player, team, or position..." />
+          <div class="filters" id="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="SP">SP</button>
+            <button class="filter-btn" data-filter="OF">OF</button>
+            <button class="filter-btn" data-filter="SS">SS</button>
+            <button class="filter-btn" data-filter="C">C</button>
+            <button class="filter-btn" data-filter="3B">3B</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>ETA</th>
+                <th>Overall</th>
+                <th>Risk</th>
+              </tr>
+            </thead>
+            <tbody id="playerTableBody">
+              <tr data-position="OF">
+                <td>Elijah Carter</td>
+                <td>Braves</td>
+                <td>OF</td>
+                <td>20</td>
+                <td>2026</td>
+                <td>80</td>
+                <td>Medium</td>
+              </tr>
+              <tr data-position="SP">
+                <td>Jalen Brooks</td>
+                <td>Dodgers</td>
+                <td>SP</td>
+                <td>22</td>
+                <td>2025</td>
+                <td>79</td>
+                <td>Low</td>
+              </tr>
+              <tr data-position="SS">
+                <td>Mateo Ruiz</td>
+                <td>Yankees</td>
+                <td>SS</td>
+                <td>21</td>
+                <td>2026</td>
+                <td>78</td>
+                <td>Medium</td>
+              </tr>
+              <tr data-position="C">
+                <td>Marco Silva</td>
+                <td>Red Sox</td>
+                <td>C</td>
+                <td>19</td>
+                <td>2027</td>
+                <td>77</td>
+                <td>High</td>
+              </tr>
+              <tr data-position="3B">
+                <td>Tyler Quinn</td>
+                <td>Guardians</td>
+                <td>3B</td>
+                <td>23</td>
+                <td>2025</td>
+                <td>76</td>
+                <td>Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="reports" class="reports">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Scouting notes</p>
+          <h2>Latest prospect reports</h2>
+        </div>
+
+        <div class="report-grid">
+          <article>
+            <span class="report-tag">Pitching</span>
+            <h3>Jalen Brooks’ fastball command is improving</h3>
+            <p>His four-seam fastball is now showing more sink and late life, helping him miss bats at higher levels.</p>
+          </article>
+
+          <article>
+            <span class="report-tag">Hit Tool</span>
+            <h3>Elijah Carter adds strength and power projection</h3>
+            <p>His bat speed remains among the best in the class, and his swing decisions have gotten sharper this month.</p>
+          </article>
+
+          <article>
+            <span class="report-tag">Defense</span>
+            <h3>Mateo Ruiz remains a premium defender at shortstop</h3>
+            <p>He continues to show plus range and a quick transfer, giving him a clear path to a major-league glove.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="cta">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow">Built for baseball fans</p>
+          <h2>Follow the pipeline from amateur ball to the big leagues.</h2>
+        </div>
+        <button class="primary-btn">Join the List</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Prospect Pulse</span>
+      <span>Baseball prospect database</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
