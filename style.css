@@ -23,7 +23,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #06161f 0%, #0d2238 100%);
+  background: background: #000000;
   color: var(--text);
   line-height: 1.6;
 }
